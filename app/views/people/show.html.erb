@@ -1,0 +1,11 @@
+<center><h1>Here's What You Are Looking For: </h1></center>
+
+<h2><%= @person.name %></h2>
+<%= button_to "Delete Contact", person_path(@person), :method => "delete", :class => "destroy" %>
+<ul>
+  <h4><% @person.addresses.each do |address| %>
+    <li> <%= address.street_address_1 %> <%= address.city %>, <%= address.state %>
+
+  <% end %>
+</ul>
+</h4>
